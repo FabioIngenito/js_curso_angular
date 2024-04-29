@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Aula 02 - JS e DOM</h1>
+    digite um valor:
+    <input type="text" id="val" />
+    <br />
+
+</body>
+
+<script>
+    dia = "sabado"
+    dia = "domingo"
+    dia = "segunda"
+
+    if (dia == "sabado") {
+        console.log("Vai estudar ANGULAR, seu vagaba!")
+    } else if (dia == "domingo") {
+        console.log("Descansa a carcaça!")
+    } else {
+        console.log("Vai trabalhar, seu vadio!")
+    }
+
+
+    // var agua = prompt("Digite a temperatura da água em graus celsius: ")
+    var agua = 15
+
+    // while (agua < -273.15) {
+    //   console.log("Entrada inválida")
+    //   var agua = prompt("Digite a temperatura da água em graus celsius: ")
+    // }
+
+    if (agua <= 273.15) {
+        console.log("Zero absoluto")
+    } else if (agua < 0) {
+        console.log("Sólido")
+    } else if (agua == 0) {
+        console.log("Ponto de fusão")
+    } else if (agua == 100) {
+        console.log("Ponto de ebulição")
+    } else if (agua > 100) {
+        console.log("Gasoso")
+    } else {
+        console.log("Líquido")
+    }
+
+
+</script>
+
+</html>

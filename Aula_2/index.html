@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+  <h1>Aula 02 - JS e DOM</h1>
+  digite um valor:
+  <input type="text" id="val" />
+  <br />
+  <input type="text" id="outputCelsius" />
+  <input type="button" title="Dispata" name="Dispara">Dispara</input> 
+  -->
+  <h1>Calculadora Simples</h1>
+  <input type="text" id="val1" name="valor1" value="1"><br><br>
+  <input type="text" id="val2" name="valor2" value="2"><br><br>
+  <input type="button" class="ope" type="submit" onclick="Calculo()" value="+" />
+  <input type="button" class="ope" type="submit" onclick="Calculo()" value="-" />
+  <input type="button" class="ope" type="submit" onclick="Calculo()" value="*" />
+  <input type="button" class="ope" type="submit" onclick="Calculo()" value="/" />
+  <h3>Resultado:</h3>
+</body>
+
+<script>
+  var idade = 32;
+  idade *= 2;
+  console.log(idade);
+
+  var temperatura = document.getElementById("val").value;
+  console.log(temperatura);
+
+  temperatura = 0;
+  console.log(ConvCelsius(temperatura));
+
+  temperatura = 14;
+  console.log(ConvFahre(temperatura));
+
+  function ConvFahre(valNum) {
+    valNum = parseFloat(valNum);
+    return (valNum - 32) / 1.8;
+  }
+
+  function ConvCelsius(valNum) {
+    valNum = parseFloat(valNum);
+    return valNum + 32 * 1.8;
+  }
+
+  // // EXEMPLO DO INSTRUTOR:
+  // var c = prompt("Digite a temperatura em graus celsius: ")
+  // var f = 1.8 * c + 32
+  // console.log(f)
+
+  dia = "sabado"
+  dia = "domingo"
+  dia = "segunda"
+
+  if (dia == "sabado") {
+    console.log("Vai estudar ANGULAR, seu vagaba!")
+  } else if (dia == "domingo") {
+    console.log("Descansa a carcaça!")
+  } else {
+    console.log("Vai trabalhar, seu vadio!")
+  }
+
+
+  // var agua = prompt("Digite a temperatura da água em graus celsius: ")
+  var agua = 15
+
+  // while (agua < -273.15) {
+  //   console.log("Entrada inválida")
+  //   var agua = prompt("Digite a temperatura da água em graus celsius: ")
+  // }
+
+  if (agua <= 273.15) {
+    console.log("Zero absoluto")
+  } else if (agua < 0) {
+    console.log("Sólido")
+  } else if (agua == 0) {
+    console.log("Ponto de fusão")
+  } else if (agua == 100) {
+    console.log("Ponto de ebulição")
+  } else if (agua > 100) {
+    console.log("Gasoso")
+  } else {
+    console.log("Líquido")
+  }
+
+  var a = 0
+
+  while (a <= 10) {
+    console.log("A variável é menor que 10")
+    a++
+  }
+
+  console.log(`A variável é ${a}`)
+  let i = 0
+
+  for (i = 0; i < 10; i++) {
+    console.log(i);
+  }
+
+  console.log("Fim do processamento.")
+  console.log(i);
+
+  function CalcularPA(inicial, razao, vezes) {
+    var termos = []
+    var atual = 0
+    termos.push(inicial)
+
+    for (let i = 1; i < vezes; i++) {
+      atual = inicial + razao * i
+      termos.push(atual)
+    }
+
+    return termos
+  }
+
+  resposta = []
+  resposta = CalcularPA(5, 2, 4)
+  console.log(resposta)
+
+
+  function Calculo(op1, op2, ope) {
+    resultado = 0
+
+    switch (ope) {
+      case "+":
+        resultado = op1 + op2
+        break;
+      case "-":
+        resultado = op1 - op2
+        break;
+      case "*":
+        resultado = op1 * op2
+        break;
+      case "/":
+        resultado = op1 / op2
+        break;
+      default:
+        break;
+    }
+
+    return resultado
+  }
+
+  console.log(`A resposta é: ${Calculo(v1, v2, "+")}`)
+</script>
+
+</html>

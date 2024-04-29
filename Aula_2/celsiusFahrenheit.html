@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Aula 02 - JS e DOM</h1>
+  Temperatura Celsius: <input type="number" id="valCel">
+  Temperatura Fahrenheit: <input type="number" id="valFah">
+</body>
+
+<script>
+  var t_c = document.getElementById("valCel").value;
+  var t_f = document.getElementById("valFah").value;
+  console.log(t_c);
+
+  temperatura = 0;
+  console.log(ConvCelsius(t_f));
+
+  temperatura = 14;
+  console.log(ConvFahre(t_c));
+
+  function ConvFahre(valNum) {
+    valNum = parseFloat(valNum);
+    return (valNum - 32) / 1.8;
+  }
+
+  function ConvCelsius(valNum) {
+    valNum = parseFloat(valNum);
+    return valNum + 32 * 1.8;
+  }
+
+  // // EXEMPLO DO INSTRUTOR:
+  // var c = prompt("Digite a temperatura em graus celsius: ")
+  // var f = 1.8 * c + 32
+  // console.log(f)
+
+</script>
+
+</html>

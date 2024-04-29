@@ -1,0 +1,119 @@
+SENAC
+Angular Interfaces front-end - AULA 02/08 - sábado, 27/04/2024
+
+Instrutor: 
+Rodrigo Ruiz Campos
+https://github.com/rodrigoruizcampos
+
+Pasta:
+Documentos
+
+Powerpoint:
+Aula 02 - Angular - Conceitos Iniciais JS - DOM.pptx
+
+-------------------------------
+* JAVASCRIPT e DOM (Document Object Model)
+
+O Document Object Model (DOM) é uma interface multiplataforma e 
+independente de linguagem que trata um documento HTML ou XML como 
+uma estrutura em árvore em que cada nó é um objeto que representa uma 
+parte do documento. O DOM representa um documento com uma árvore lógica. 
+Cada ramo da árvore termina em um nó e cada nó contém objetos. 
+
+Os métodos DOM permitem acesso programático à árvore; com eles pode-se a
+lterar a estrutura, estilo ou conteúdo de um documento. Os nós podem ter 
+manipuladores de eventos (também conhecidos como 'listeners' [ouvintes] 
+de eventos) anexados a eles. Depois que um evento é acionado, os 
+manipuladores de eventos são executados.
+
+https://en.wikipedia.org/wiki/Document_Object_Model
+
+-------------------------------
+* TIPOS DE DADOS - página 6 do arquivo ".PPTX"
+
+Tipagem dinâmica e fraca
+
+JavaScript é uma linguagem dinâmica com tipos dinâmicos. As variáveis 
+em JavaScript não estão diretamente associadas a nenhum tipo de valor 
+específico, e qualquer variável pode receber (e reatribuir) valores de 
+todos os tipos:
+
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures
+
+-------------------------------
+* Script de Javascript sempre no rodapé da página HTML. Dependendo da 
+cultura da empresa coloca-se dentro da TAG <footer> ou acima da TAG 
+final do HTML </html>.
+
+<script> "comandos javascript" </script>
+
+-------------------------------
+* Assitir o vídeo LET x VAR
+
+var let e const em JavaScript comparado - quando usar e como
+Zac Gordon
+12 de out. de 2017
+
+Neste trecho do Curso Master de JavaScript para WordPress, o educador 
+Zac Gordon aborda as características específicas das palavras-chave var, 
+let e const.
+
+https://youtu.be/pcxR1iMegfU?si=-hyaNPgcpesLdjDE
+
+------------------------------
+* Montar um código para calcular a conversão de graus Celsius (°C) para 
+Fahrenheit (°F):
+
+function ConvFahre(valNum) {
+  valNum = parseFloat(valNum);
+  return (valNum - 32) / 1.8;
+}
+
+function ConvCelsius(valNum) {
+  valNum = parseFloat(valNum);
+  return valNum + 32 * 1.8;
+}
+
+------------------------------
+* Montar um código para exemplificar o "If Else if Else":
+
+dia = "sabado"
+//dia = "domingo"
+//dia = "segunda"
+
+if (dia == "sabado") {
+    console.log("Vai estudar ANGULAR, seu vagaba!")
+} else if (dia == "domingo") {
+    console.log("Descansa a carcaça!")
+} else {
+    console.log("Vai trabalhar, seu vadio!")
+}
+
+------------------------------
+* Operadores Booleanos:
+
+Como utilizar operadores de comparação em Javascript
+
+https://www.alura.com.br/artigos/operadores-matematicos-em-javascript
+
+------------------------------
+* ESTRUTURAS DE REPETIÇÃO:
+
+- While
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while
+
+- For
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for
+
+------------------------------
+* LINK:
+
+- CSS Button Generator
+https://www.cssbuttongenerator.com/
+
+================================
+------------------------------
+* LIÇÃO DE CASA
+- Pegar o código da tabuada no Git Hub ou no Code Pen e mmomntar uma tabuada como esse código.
+
+------------------------------

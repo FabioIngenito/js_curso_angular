@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+</head>
+
+<body>
+  <h1>Calculadora Simples</h1>
+  <input type="number" id="val1" name="valor1" value=1><br><br>
+  <input type="number" id="val2" name="valor2" value=2><br><br>
+  <input type="button" class="ope" type="submit" onclick="Calculo('+')" value="+" />
+  <input type="button" class="ope" type="submit" onclick="Calculo('-')" value="-" />
+  <input type="button" class="ope" type="submit" onclick="Calculo('*')" value="*" />
+  <input type="button" class="ope" type="submit" onclick="Calculo('/')" value="/" />
+  <h3>Resultado:</h3>
+  <input type="number" id="resultado">
+  <!-- <label for="html" id="resultado"></label><br> -->
+</body>
+
+<script>
+
+  function Calculo(ope) {
+    var op1 = document.getElementById("val1").value;
+    var op2 = document.getElementById("val2").value;
+
+    //console.log(ope)
+    resultado = 0
+
+    switch (ope) {
+      case "+":
+        resultado = op1 + op2
+        break;
+      case "-":
+        resultado = op1 - op2
+        break;
+      case "*":
+        resultado = op1 * op2
+        break;
+      case "/":
+        resultado = op1 / op2
+        break;
+      default:
+        break;
+    }
+
+    document.getElementById("resultado").value = resultado
+    //return resultado
+  }
+
+  //console.log(`A resposta é: ${Calculo(v1, v2, "+")}`)
+</script>
+
+</html>
