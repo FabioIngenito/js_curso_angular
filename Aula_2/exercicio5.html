@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../teste.png">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Aula 02 - JS e DOM - Exercício 5</h1>
+</body>
+
+<script>
+
+    const v1 = 10
+    const v2 = 5
+    const operador = "+"
+
+    console.log(`A resposta é: ${Calculo(v1, v2, operador)}`)
+
+    function Calculo(op1, op2, ope) {
+        resultado = 0
+
+        switch (ope) {
+            case "+":
+                resultado = op1 + op2
+                break;
+            case "-":
+                resultado = op1 - op2
+                break;
+            case "*":
+                resultado = op1 * op2
+                break;
+            case "/":
+                resultado = op1 / op2
+                break;
+            default:
+                break;
+        }
+
+        return resultado
+    }
+
+</script>
+
+</html>

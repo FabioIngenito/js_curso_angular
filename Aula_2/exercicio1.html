@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../teste.png">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Aula 02 - JS e DOM - Exercício 1</h1>
+</body>
+
+<script>
+    temperatura = 0;
+    console.log(ConvFahre(temperatura));
+
+    temperatura = 14;
+    console.log(ConvCelsius(temperatura));
+
+    function ConvFahre(valNum) {
+        valNum = parseFloat(valNum);
+        return valNum * 1.8 + 32;
+    }
+
+    function ConvCelsius(valNum) {
+        valNum = parseFloat(valNum);
+        return (valNum - 32) / 1.8;
+    }
+
+    // // EXEMPLO DO INSTRUTOR:
+    // var c = prompt("Digite a temperatura em graus celsius: ")
+    // var f = 1.8 * c + 32
+    // console.log(f)
+</script>
+
+</html>

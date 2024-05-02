@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../teste.png">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Aula 02 - JS e DOM - Exercício 4</h1>
+</body>
+
+<script>
+    resposta = []
+    resposta = CalcularPA(5, 2, 4)
+    console.log(resposta)
+
+    function CalcularPA(inicial, razao, vezes) {
+        var termos = []
+        var atual = 0
+        termos.push(inicial)
+
+        for (let i = 1; i < vezes; i++) {
+            atual = inicial + razao * i
+            termos.push(atual)
+        }
+
+        return termos
+    }
+
+</script>
+
+</html>

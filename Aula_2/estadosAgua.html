@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../teste.png">
+    <link rel="stylesheet" type="text/css" href="./estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Aula 02 - JS e DOM</h1>
+    Temperatura em Celsius da Água:
+    <input type="number" id="impTempAgua" value="0">
+    <br />
+    <br />
+    <!-- <input type="button" class="buttonClass" value="Calcula Estado" id="btnTempAgua" /> -->
+    <a href="#" class="buttonClass" value="Calcula Estado" id="btnTempAgua">Calcula Estado</a>
+    <br />
+    <br />
+    ESTADO:
+    <input type="text" id="txtEstado" value="" readonly>
+</body>
+
+<script>
+
+    btnTempAgua.addEventListener("click", () => {
+        temperatura = document.getElementById("impTempAgua");
+        estado = document.getElementById("txtEstado");
+
+        if (temperatura.value <= -273.15)
+            estado.value = "Zero absoluto"
+        else if (temperatura.value < 0)
+            estado.value = "Sólido"
+        else if (temperatura.value == 0)
+            estado.value = "Ponto de fusão"
+        else if (temperatura.value == 100)
+            estado.value = "Ponto de ebulição"
+        else if (temperatura.value > 100)
+            estado.value = "Gasoso"
+        else
+            estado.value = "Líquido"
+
+        console.log(`${temperatura.value} - ${estado.value}`)
+    });
+</script>
+
+</html>

@@ -1,43 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../teste.png">
   <title>Document</title>
+  <!-- <script type="text/javascript" src="celsiusFahrenheit.js"></script> -->
 </head>
 
 <body>
   <h1>Aula 02 - JS e DOM</h1>
-  Temperatura Celsius: <input type="number" id="valCel">
-  Temperatura Fahrenheit: <input type="number" id="valFah">
+  Temperatura Celsius: <input type="number" id="numCel" value="0">
+  <input type="button" value="Celsius -> Fahrenheit" id="btnCel" />
+  <br />
+  Temperatura Fahrenheit: <input type="number" id="numFah">
+  <input type="button" value="Fahrenheit -> Celsius" id="btnFah" />
+  <br />
+  <br />
+  <br />
+  OUTRA FORMA:
+  <br />
+  <br />
+  <input type="radio" name="converter" id="CtoF" />Celsius para Fahrenheit <br />
+  <input type="radio" name="converter" id="FtoC" />Fahrenheit para Celsius <br />
+  Converter valor :<input id="num" type="number"> <br />
+  <button onclick="main()">Calcular</button><br />
+  Resposta: <div id="resposta" style='display:inline'></div><br />
 </body>
 
 <script>
-  var t_c = document.getElementById("valCel").value;
-  var t_f = document.getElementById("valFah").value;
-  console.log(t_c);
+  var numCel = document.getElementById("numCel").value;
+  var numFah2 = document.getElementById("numFah").value;
 
-  temperatura = 0;
-  console.log(ConvCelsius(t_f));
+  var val = numCel;
+  console.log(`val: ${val}`);
+  console.log(`numFah2: ${numFah2}`);
 
-  temperatura = 14;
-  console.log(ConvFahre(t_c));
+  const btnCel = document.querySelector("#btnCel");
+  //const btnCel = document.getElementById("btnCel").value;
+  btnCel.addEventListener("click", (evt) => {
+    var numCel = document.getElementById("numCel").value;
+    var numFah = document.getElementById("numFah").value;
+    //evt.
+    numF = ConvFahre(numCel);
+    numFah = numF;
+    console.log(`ConvFahre(numCel): ${ConvFahre(numCel)}`)
+    console.log(`numF: ${numF}`)
+    console.log(`numFah: ${numFah}`);
+    console.log(`numCel: ${numCel}`);
+  });
+
+  const btnFah = document.querySelector("#btnFah");
+  //const btnFah = document.getElementById("btnFah").value;
+  btnFah.addEventListener("click", () => {
+    var numCel = document.getElementById("numCel").value;
+    var numFah = document.getElementById("numFah").value;
+    numCel.value = ConvCelsius(numFah)
+  });
 
   function ConvFahre(valNum) {
     valNum = parseFloat(valNum);
-    return (valNum - 32) / 1.8;
+    return valNum * 1.8 + 32;
   }
 
   function ConvCelsius(valNum) {
     valNum = parseFloat(valNum);
-    return valNum + 32 * 1.8;
+    return (valNum - 32) / 1.8;
   }
 
-  // // EXEMPLO DO INSTRUTOR:
-  // var c = prompt("Digite a temperatura em graus celsius: ")
-  // var f = 1.8 * c + 32
-  // console.log(f)
+  // --------------------------------------------
+  // OUTRA FORMA:
+  // --------------------------------------------
+
+  function main() {
+    var num = parseInt(document.getElementById("num").value);
+    var resp = document.getElementById("resposta");
+
+    if (document.getElementById("CtoF").checked == true)
+      resp.innerHTML = ctof(num);
+    if (document.getElementById("FtoC").checked == true)
+      resp.innerHTML = ftoc(num);
+  }
+  function ctof(x) {
+    return (1.8 * x + 32);
+  }
+
+  function ftoc(x) {
+    return ((x - 32) * 1.8);
+  }
 
 </script>
 

@@ -11,6 +11,9 @@ Documentos
 Powerpoint:
 Aula 02 - Angular - Conceitos Iniciais JS - DOM.pptx
 
+Github:
+https://github.com/FabioIngenito/js_curso_angular
+
 -------------------------------
 * JAVASCRIPT e DOM (Document Object Model)
 
@@ -65,13 +68,13 @@ https://youtu.be/pcxR1iMegfU?si=-hyaNPgcpesLdjDE
 Fahrenheit (°F):
 
 function ConvFahre(valNum) {
-  valNum = parseFloat(valNum);
-  return (valNum - 32) / 1.8;
+    valNum = parseFloat(valNum);
+    return valNum * 1.8 + 32;
 }
 
 function ConvCelsius(valNum) {
-  valNum = parseFloat(valNum);
-  return valNum + 32 * 1.8;
+    valNum = parseFloat(valNum);
+    return (valNum - 32) / 1.8;
 }
 
 ------------------------------
@@ -113,7 +116,113 @@ https://www.cssbuttongenerator.com/
 
 ================================
 ------------------------------
-* LIÇÃO DE CASA
+* LIÇÃO DE CASA - Hora do Desafio
 - Pegar o código da tabuada no Git Hub ou no Code Pen e mmomntar uma tabuada como esse código.
 
-------------------------------
+================================
+tabuada.html
+================================
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="shortcut icon" href="../teste.png">
+    <link rel="stylesheet" href="tabuada.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="card">
+            <img src="./tabuada.png">
+            <!-- <img src="./painel.png"> -->
+            <!-- <figcaption>TABUADA</figcaption> -->
+            <p>Digite um número</p>
+            <input type="number" id="valor">
+            <br>
+            <button>criar Tabuada</button>
+            <div id="resposta"></div>
+        </div>
+    </div>
+
+</body>
+
+<script src="tabuada.js"></script>
+
+</html>
+
+================================
+tabuada.js
+================================
+
+const btnCalcular = document.querySelector("button");
+
+btnCalcular.addEventListener("click", () => {
+  const divValor = document.getElementById("valor").value;
+  const divResposta = document.getElementById("resposta");
+  const numMin = 1;
+  const numMax = 10;
+  let calc = "";
+  let resultado = "";
+  resposta.innerHTML = "";
+
+  if (Number(divValor) < numMin || Number(divValor) > numMax) {
+    divResposta.setAttribute("style", "width: 220px;");
+    divResposta.innerHTML = `Escolha um numero de ${numMin} a ${numMax}`;
+  } else {
+    for (var i = 1; i <= numMax; i++) {
+      calc = `${String(i)} x ${divValor} = ${i * Number(divValor)}`;
+      resultado = document.createElement("div");
+      resultado.innerText = calc;
+      divResposta.setAttribute("style", "width: 100px;");
+      divResposta.appendChild(resultado);
+    }
+  }
+});
+
+
+================================
+tabuada.css
+================================
+
+img {
+  height: 75px;
+  width: 300px;
+}
+
+#container {
+  height: 100vh;
+  width: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    mediumaquamarine,
+    darkslateblue
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card {
+  height: 400px;
+  width: 300px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+#resposta {
+  height: 200px;
+  width: 100px;
+  margin-left: 30px;
+}
+
+================================
