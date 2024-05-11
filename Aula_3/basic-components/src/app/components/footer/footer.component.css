@@ -1,0 +1,15 @@
+* {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: red;
+  color: white;
+}
+
+.borda {
+  padding: 50px;
+  border-style: solid;
+  border-color: black;
+}
