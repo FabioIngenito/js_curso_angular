@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="../teste.png">
-  <title>Document</title>
+  <title>Aula 02 - Exer 01</title>
   <!-- <script type="text/javascript" src="celsiusFahrenheit.js"></script> -->
 </head>
 
 <body>
-  <h1>Aula 02 - JS e DOM</h1>
+  <h1>Aula 02 - JS e DOM - Exercício 01</h1>
   Temperatura Celsius: <input type="number" id="numCel" value="0">
   <input type="button" value="Celsius -> Fahrenheit" id="btnCel" />
   <br />
@@ -19,7 +19,9 @@
   <br />
   <br />
   <br />
-  OUTRA FORMA:
+  --------------------------------------------<br />
+  OUTRA FORMA:<br />
+  --------------------------------------------<br />
   <br />
   <br />
   <input type="radio" name="converter" id="CtoF" />Celsius para Fahrenheit <br />
@@ -30,33 +32,21 @@
 </body>
 
 <script>
-  var numCel = document.getElementById("numCel").value;
-  var numFah2 = document.getElementById("numFah").value;
-
-  var val = numCel;
-  console.log(`val: ${val}`);
-  console.log(`numFah2: ${numFah2}`);
-
   const btnCel = document.querySelector("#btnCel");
-  //const btnCel = document.getElementById("btnCel").value;
+  const btnFah = document.querySelector("#btnFah");
+
   btnCel.addEventListener("click", (evt) => {
-    var numCel = document.getElementById("numCel").value;
-    var numFah = document.getElementById("numFah").value;
-    //evt.
-    numF = ConvFahre(numCel);
-    numFah = numF;
-    console.log(`ConvFahre(numCel): ${ConvFahre(numCel)}`)
-    console.log(`numF: ${numF}`)
-    console.log(`numFah: ${numFah}`);
-    console.log(`numCel: ${numCel}`);
+    var numCel = document.getElementById("numCel");
+    var numFah = document.getElementById("numFah");
+
+    numFah.value = ConvFahre(numCel.value);
   });
 
-  const btnFah = document.querySelector("#btnFah");
-  //const btnFah = document.getElementById("btnFah").value;
   btnFah.addEventListener("click", () => {
-    var numCel = document.getElementById("numCel").value;
-    var numFah = document.getElementById("numFah").value;
-    numCel.value = ConvCelsius(numFah)
+    var numCel = document.getElementById("numCel");
+    var numFah = document.getElementById("numFah");
+
+    numCel.value = ConvCelsius(numFah.value)
   });
 
   function ConvFahre(valNum) {
@@ -82,6 +72,7 @@
     if (document.getElementById("FtoC").checked == true)
       resp.innerHTML = ftoc(num);
   }
+
   function ctof(x) {
     return (1.8 * x + 32);
   }

@@ -5,54 +5,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../teste.png">
-    <title>Document</title>
+    <title>Aula 02 - Slide 15</title>
 </head>
 
 <body>
-    <h1>Aula 02 - JS e DOM</h1>
-    digite um valor:
-    <input type="text" id="val" />
+    <h1>Aula 02 - JS e DOM - Slide 15</h1>
     <br />
+    <label for="diaDaSemana">Escolha um dia da Semana:</label>
 
+    <select id="diaDaSemana">
+        <option value="dom">Domingo</option>
+        <option value="seg">Segunda-feira</option>
+        <option value="ter">Terça-feira</option>
+        <option value="qua">Quarta-feira</option>
+        <option value="qui">Quinta-feira</option>
+        <option value="sex">Sexta-feira</option>
+        <option value="sab" selected>Sábado</option>
+    </select>
+    <br />
+    <br />
+    <button>Tarefa</button>
+    <br />
+    <br />
+    Resposta: <b><span id="divResposta"></span></b>
 </body>
 
 <script>
-    dia = "sabado"
-    dia = "domingo"
-    dia = "segunda"
+    const btnTarefa = document.querySelector("button");
 
-    if (dia == "sabado") {
-        console.log("Vai estudar ANGULAR, seu vagaba!")
-    } else if (dia == "domingo") {
-        console.log("Descansa a carcaça!")
-    } else {
-        console.log("Vai trabalhar, seu vadio!")
-    }
+    btnTarefa.addEventListener("click", () => {
+        const diaDaSemana = document.getElementById("diaDaSemana")
+        const dia = diaDaSemana.options[diaDaSemana.selectedIndex].value;
+        const btnResposta = document.getElementById("divResposta")
 
-
-    // var agua = prompt("Digite a temperatura da água em graus celsius: ")
-    var agua = 15
-
-    // while (agua < -273.15) {
-    //   console.log("Entrada inválida")
-    //   var agua = prompt("Digite a temperatura da água em graus celsius: ")
-    // }
-
-    if (agua <= 273.15) {
-        console.log("Zero absoluto")
-    } else if (agua < 0) {
-        console.log("Sólido")
-    } else if (agua == 0) {
-        console.log("Ponto de fusão")
-    } else if (agua == 100) {
-        console.log("Ponto de ebulição")
-    } else if (agua > 100) {
-        console.log("Gasoso")
-    } else {
-        console.log("Líquido")
-    }
-
-
+        if (dia == "sab") {
+            btnResposta.innerHTML = "Vai estudar ANGULAR, seu vagaba!"
+        } else if (dia == "dom") {
+            btnResposta.innerHTML = "Descansa a carcaça!"
+        } else {
+            btnResposta.innerHTML = "Vai trabalhar, seu vadio!"
+        }
+    })
 </script>
 
 </html>

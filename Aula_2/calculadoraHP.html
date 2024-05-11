@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../teste.png">
+    <title>Aula 02 - Exer 05</title>
+</head>
+
+<body>
+    <h1>Aula 02 - JS e DOM - Exercício 5</h1>
+
+    <div>
+        Entre com o 1º operando:
+        <input type="number" name="Primeiro operando" id="numOP1" value="10">
+    </div>
+
+
+    <div>
+        Entre com o 2º operando:
+        <input type="number" name="Segundo operando" id="numOP2" value="5">
+    </div>
+
+    <label for="operacao">Entre com a operação:</label>
+
+    <select id="operacao">
+        <option value="+">Soma</option>
+        <option value="-">Subtração</option>
+        <option value="*">Multiplicação</option>
+        <option value="/">Divisão</option>
+    </select>
+
+    <br />
+    <br />
+    <button>Processa</button>
+    <br />
+    <br />
+    Resposta: <b><span id="divResposta"></span></b>
+
+</body>
+
+<script>
+    const btnTarefa = document.querySelector("button");
+
+    btnTarefa.addEventListener("click", () => {
+        const op1 = parseFloat(document.getElementById("numOP1").value);
+        const op2 = parseFloat(document.getElementById("numOP2").value);
+        const operacao = document.getElementById("operacao");
+        const operador = operacao.options[operacao.selectedIndex].value;
+        const divResposta = document.getElementById("divResposta")
+
+        // console.log(`Operador1: ${op1} - ${typeof (op1)}`)
+        // console.log(`Operador2: ${op2} - ${typeof (op2)}`)
+        // console.log(`operador: ${operador} - ${typeof (operador)}`)
+
+        if (op2 === 0 && operador == "/") {
+            divResposta.innerHTML = "Impossível dividir por zero."
+        } else {
+            divResposta.innerHTML = Calculo(op1, op2, operador)
+        }
+    })
+
+    function Calculo(op1, op2, ope) {
+        resultado = 0
+
+        switch (ope) {
+            case "+":
+                resultado = op1 + op2
+                break;
+            case "-":
+                resultado = op1 - op2
+                break;
+            case "*":
+                resultado = op1 * op2
+                break;
+            case "/":
+                resultado = op1 / op2
+                break;
+            default:
+                break;
+        }
+
+        return resultado
+    }
+
+</script>
+
+</html>

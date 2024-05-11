@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../teste.png">
+    <title>Aula 02 - Exer 04</title>
+</head>
+
+<body>
+    <h1>Aula 02 - JS e DOM - Exercício 04</h1>
+    <div>
+        Digite o valor inicial:
+        <input type="number" name="Valor Inicial" id="inpVInicial" value="5">
+    </div>
+    <div>
+        Digite a razão:
+        <input type="number" name="Razão" id="inpRazao" value="2">
+    </div>
+    <div>
+        Digite o número de vezes:
+        <input type="number" name="Número de vezes" id="inpNVezes" value="4">
+    </div>
+    <br />
+    <button>Calcula</button>
+    <br />
+    <br />
+    Resposta: <b><span id="divResposta"></span></b>
+</body>
+
+<script>
+    const btnCalcula = document.querySelector("button");
+
+    btnCalcula.addEventListener("click", () => {
+        const inpVInicial = parseFloat(document.getElementById("inpVInicial").value);
+        const inpRazao = parseFloat(document.getElementById("inpRazao").value);
+        const inpNVezes = parseFloat(document.getElementById("inpNVezes").value);
+        const divResposta = document.getElementById("divResposta");
+        const valores = CalcularPA(inpVInicial, inpRazao, inpNVezes);
+
+        // console.log(`VI: ${inpVInicial} - ${typeof (inpVInicial)}`)
+        // console.log(`Ra: ${inpRazao} - ${typeof (inpRazao)}`)
+        // console.log(`NV: ${inpNVezes} - ${typeof (inpNVezes)}`)
+        // console.log(`Va: ${valores}`)
+
+        divResposta.innerHTML = valores;
+    })
+
+    function CalcularPA(inicial, razao, vezes) {
+        var termos = []
+        var atual = 0
+        termos.push(inicial)
+
+        for (let i = 1; i < vezes; i++) {
+            atual = inicial + razao * i
+            termos.push(atual)
+        }
+
+        return termos
+    }
+
+</script>
+
+</html>
