@@ -1,0 +1,18 @@
+* {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: "Inter";
+  text-align: center;
+}
+
+.texto {
+  display: flex;
+}
+
+.linha {
+  flex-direction: row;
+  justify-content: space-evenly;
+}

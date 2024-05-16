@@ -1,0 +1,31 @@
+* {
+  background-color: #d9d9d9;
+  font-family: "Inter";
+  width: 150px;
+  padding: 0 2px;
+}
+
+#corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 165px;
+}
+
+img {
+  width: 40%;
+  padding: 20px 0 0 0;
+}
+
+#p1 {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: bold;
+
+  padding: 10px 0;
+}
+
+#p2 {
+  font-size: 0.5rem;
+}

@@ -1,0 +1,169 @@
+SENAC
+Angular Interfaces front-end - AULA 03/08 - sábado, 11/05/2024
+OBS.: no sábado, 04/05/2024 NÃO houve aula
+
+Instrutor: 
+Rodrigo Ruiz Campos
+https://github.com/rodrigoruizcampos
+https://www.linkedin.com/in/rodrigo-ruiz-campos-49aa17175/
+Dia de semana: Sala dos professores, terças-feiras das 14h45 às 17h00.
+
+Pasta:
+Documentos
+
+Powerpoint:
+Aula 04 - Angular.pptx
+OBS.: Foi trocada a ordem das aulas.
+
+Github:
+https://github.com/FabioIngenito/js_curso_angular
+https://github.com/rodrigoruizcampos/PortifolioAngular
+
+-------------------------------
+- Angular - Feito pela Google
+
+O AngularJS é a primeira iniciativa da Google, um framework para desenvolvimento de softwares que integram diferentes códigos, promovendo um funcionamento simples no entendimento das aplicações por meio do HTML e auxilia no single page application, construção de aplicação da página única.
+
+-------------------------------
+- Componentes - 
+
+Vários componentes formam uma aplicação
+A arquitetura é baseada em componentes
+
+https://material.angular.io/components/categories
+
+-------------------------------
+- SPA e MPA
+
+SPA - Single Page Application 
+MPA - Multi Page Application 
+
+https://asperbrothers.com/blog/spa-vs-mpa/
+
+-------------------------------
+- Angular X React X Vue.js
+
+Frameworks Javascript
+
+https://www.alura.com.br/artigos/angular-vs-react-vs-vue-js
+
+------------------------------
+- Google trends - comparativo dos frameworks (desde 2004)
+
+https://trends.google.com.br/trends/explore?date=all&geo=BR&q=Angular,React,Vue&hl=pt
+
+Veja também o TIOBE Index (role a página):
+
+https://www.tiobe.com/tiobe-index/
+
+------------------------------
+- Página principal do Angular:
+
+https://angular.io/
+https://angular.io/docs
+
+------------------------------
+- Instalar o Node.JS
+
+https://nodejs.org/
+
+LTS - Long Term Support (suporte para longo prazo)
+
+O que é uma versão LTS?
+https://canaltech.com.br/apps/o-que-e-versao-lts/
+
+------------------------------
+- Interface de Linha de Comando - CLI
+
+O que é uma CLI?
+https://aws.amazon.com/pt/what-is/cli/
+
+OLDIES... coisa de velho...
+- DOS - Disk Operating System (Sistema Operacional em Disco)
+Dica: Veja "Principais Comandos"
+
+------------------------------
+- Comandos npm X npx
+
+O npm (node package manager) é o gerenciador de dependências/pacotes que você recebe ao instalar o Node.js. Ele fornece um modo para os desenvolvedores instalarem pacotes, tanto em nível global quanto local.
+O npx é um executor de pacote NPM que torna realmente fácil instalar qualquer tipo de executável de nó que normalmente teria sido instalado usando NPM.
+
+SOMENTE NA INTERFACE BASH:
+
+$ which npx
+/c/Program Files/nodejs/npx
+
+Veja mais em:
+https://www.freecodecamp.org/portuguese/news/npm-x-npx-qual-e-a-diferenca/
+
+Dentro da pasta do projeto (onde tem a pasta ".angular")
+
+Rodar o servidor (porta local 4200):
+ng serve
+Se o "ng" não estiver em 
+npx ng serve 
+-> http://localhost:4200
+
+Instalação:
+npm install -g @angular/cli
+
+Desinstalação:
+npm uninstall -g angular-cli
+
+Limpar o cache:
+npm cache clean
+
+Verificar a versão do angular:
+ng version
+ng v
+npx ng v
+
+Verificar a versão do node:
+node --version
+node -v
+
+Criar um projeto:
+npx ng new Nome_do_Projeto
+npx ng new basic-components
+
+Criar componente angular:
+npx ng generate component components/header
+npx ng g c components/header
+
+------------------------------
+- Adicionando o Angular CLI (ng) ao PATH do Windows
+
+- No campo "Pesquisar" ao lado do ícone do Windows, digite: "Variáveis de Ambiente";
+- Escolha: "Editar as variáveis de ambiente do sistema"
+
+Aparecerá uma janela:
+"Propriedades do Sistema / ABA Avançado / BOTÃO Variáveis de Ambiente..."
+
+- Clique no botão "Variáveis de Ambiente..."
+- Dentro da janela "Variáveis de Usuário para SEU_NOME" procure pela linha "Path"
+- Clique na "Path" e depois no Botão "Editar...":
+
+- Adicione a linha (ANTES modifique "SEU_NOME_DE_USUÁRIO" para o seu nome de usuário... dããã...):
+C:\Users\SEU_NOME_DE_USUÁRIO\AppData\Roaming\npm
+
+O meu ficou assim:
+C:\Users\fabioi\AppData\Roaming\npm
+
+Nem precisa do "Rapid Environment Editor" da explicação do link abaixo:
+
+https://faustocintra.com.br/blog/desenvolvimento-front-end/adicionando-o-angular-cli-ng-ao-path-do-windows/
+
+Rapid Environment Editor
+https://www.rapidee.com/en/download
+
+================================
+------------------------------
+* LIÇÃO DE CASA - Hora do Desafio
+- Mané Delivery.
+
+https://www.figma.com/file/aAKkp1BUUoKGYfaKPJMz60/Man%C3%A9-Delivery?type=design&node-id=0%3A1&mode=design&t=rJcQKKctOyl4L2Gc-1 
+
+- Exemplo:
+https://github.com/FabioIngenito/js_curso_angular/tree/master/Aula_3/ManeDelivery
+
+================================

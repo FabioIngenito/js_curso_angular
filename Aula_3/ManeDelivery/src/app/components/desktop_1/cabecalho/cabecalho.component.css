@@ -1,0 +1,49 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 3rem;
+
+  background: #1a1a1a;
+}
+
+/* Logo */
+img {
+  width: 133px;
+  margin-left: 2rem;
+}
+
+/* ENTRAR */
+button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.6rem;
+  border: 0;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  height: 2rem;
+  padding: 0 1.6rem;
+  margin-right: 2rem;
+
+  color: #1a1a1a;
+  background-color: #ffcc00;
+}
+
+button:hover {
+  background-color: #ffaa00;
+  transform: translateY(-1px);
+}
+
+button:focus {
+  background-color: #ff8800;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+button:active {
+  background-color: #ff6600;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
