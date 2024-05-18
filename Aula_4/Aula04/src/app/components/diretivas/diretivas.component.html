@@ -1,0 +1,71 @@
+<p>diretivas works!</p>
+
+<h2>Interpolação de Dados</h2>
+
+<p>idade: {{ idade }}</p>
+<p>nome: {{ nome }}</p>
+<p>name: {{ pessoa.name }}</p>
+<p>age: {{ pessoa.age }}</p>
+
+<hr />
+<h2>Diretiva condicional *ngif</h2>
+
+<p *ngIf="pessoa.age > 18">Maior de idade</p>
+<P *ngIf="pessoa.age < 18">Menor de idade</P>
+
+<h3>Diretiva condicional2 *ngif</h3>
+<p *ngIf="pessoa.age > 180; else casocontrario">Maior de idade</p>
+<ng-template #casocontrario>Menor de IDADE</ng-template>
+
+<hr />
+<h2>FRETE *ngif</h2>
+
+<h4>Primeira forma</h4>
+<p
+  *ngIf="
+    pessoa.estado === 'SP' ||
+      pessoa.estado === 'RJ' ||
+      pessoa.estado === 'MG' ||
+      pessoa.estado === 'ES';
+    else outroestado
+  "
+>
+  Frete 20%
+</p>
+<ng-template #outroestado>Frete 30%</ng-template>
+
+<h4>Segunda forma</h4>
+<div *ngFor="let estado of arrEst; let i = index">
+  <div #else not selected..>{{ pessoa.estado }} === {{ estado }}</div>
+  <div *ngIf="pessoa.estado === estado; else outroestado">Frete 20%</div>
+</div>
+
+<h4>Terceira forma</h4>
+<div *ngFor="let estado of arrEst; let i = index">
+  <div #else not selected..>{{ pessoa.estado }} === {{ estado }}</div>
+  <div *ngIf="pessoa.estado === estado; else outroestado">Frete 20%</div>
+</div>
+
+<hr />
+<h2>Diretiva Repetição *ngFor</h2>
+<ul>
+  <li *ngFor="let item of lista; let i = index">{{ lista[i] }}</li>
+</ul>
+
+<h3>Diretiva Repetição 2</h3>
+<ul>
+  <li *ngFor="let cliente of clientes">
+    nome: {{ cliente.nome }}, idade: {{ cliente.idade }}
+  </li>
+</ul>
+
+<h3>Diretiva Repetição 3</h3>
+<ul>
+  <li *ngFor="let cliente of clientes2">
+    nome: {{ cliente.nome }}, idade: {{ cliente.idade }}
+  </li>
+</ul>
+
+<h2>Diretiva Repetição [ngStyle] e [ngClass]</h2>
+<h3 [ngStyle]="{ 'color': cor, 'font-family': fonte }">teste de NgStyle</h3>
+<h3 [ngClass]="titulo">teste de NgClass</h3>
