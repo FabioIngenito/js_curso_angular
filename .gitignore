@@ -1,3 +1,7 @@
+*.pdf
+*.txt
+.gitignore
+
 .DS_STORE
 
 /dist/
