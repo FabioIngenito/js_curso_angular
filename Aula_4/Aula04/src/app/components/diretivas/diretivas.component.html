@@ -54,18 +54,51 @@
 
 <h3>Diretiva Repetição 2</h3>
 <ul>
-  <li *ngFor="let cliente of clientes">
-    nome: {{ cliente.nome }}, idade: {{ cliente.idade }}
+  <li *ngFor="let cli of clientes">
+    nome: {{ cli.nome }}, idade: {{ cli.idade }}
   </li>
 </ul>
 
 <h3>Diretiva Repetição 3</h3>
 <ul>
-  <li *ngFor="let cliente of clientes2">
-    nome: {{ cliente.nome }}, idade: {{ cliente.idade }}
+  <li *ngFor="let cli of clientes2">
+    nome: {{ cli.nome }}, idade: {{ cli.idade }}, Estado: {{ cli.estado }}
   </li>
 </ul>
 
+// NgStyle e NgClass //
+https://codecraft.tv/courses/angular/built-in-directives/ngstyle-and-ngclass/
+
 <h2>Diretiva Repetição [ngStyle] e [ngClass]</h2>
-<h3 [ngStyle]="{ 'color': cor, 'font-family': fonte }">teste de NgStyle</h3>
+<h3 [ngStyle]="{ color: cor, 'font-family': fonte }">teste de NgStyle</h3>
 <h3 [ngClass]="titulo">teste de NgClass</h3>
+
+<h3>Diretiva *ngSwitchCase e *ngSwitchDefault</h3>
+
+<div [ngSwitch]="potato2">
+  <h1 *ngSwitchCase="'Russet'">{{ potato }} é uma batata Russet.</h1>
+  <h1 *ngSwitchCase="'Sweet'">{{ potato }} é uma batata doce.</h1>
+  <h1 *ngSwitchCase="'Laura'">{{ potato }} é uma batata Rosalinda.</h1>
+  <h1 *ngSwitchDefault>{{ potato }} é um tipo diferente de batata.</h1>
+</div>
+
+<h3>Diretiva de Artibutos - Tarefa 04</h3>
+<ul>
+  <li *ngFor="let cli of clientes2">
+    <div
+      [ngStyle]="{
+        color:
+          cli.estado === 'SP' ||
+          cli.estado === 'RJ' ||
+          cli.estado === 'MG' ||
+          cli.estado === 'ES'
+            ? 'blue'
+            : 'red'
+      }"
+    >
+      nome: {{ cli.nome }}, idade: {{ cli.idade }}, sexo: {{ cli.sexo }},
+      Estado:
+      {{ cli.estado }}
+    </div>
+  </li>
+</ul>

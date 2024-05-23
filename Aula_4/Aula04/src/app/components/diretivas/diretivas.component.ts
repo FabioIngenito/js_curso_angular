@@ -24,25 +24,28 @@ export class DiretivasComponent {
   clientes = [
     { nome: 'Rodrigo', idade: 42, estado: 'SP' },
     { nome: 'Angela', idade: 39, estado: 'RJ' },
-    { nome: 'Leticia', idade: 3, estado: 'SP' },
+    { nome: 'Leticia', idade: 3, estado: 'AM' },
   ];
 
   pessoa1 = {
     nome: 'João',
     idade: 17,
     sexo: 'M',
+    estado: 'SP',
   };
 
   pessoa2 = {
     nome: 'José',
     idade: 18,
     sexo: 'M',
+    estado: 'RJ',
   };
 
   pessoa3 = {
     nome: 'Maria',
     idade: 19,
     sexo: 'F',
+    estado: 'AM',
   };
 
   clientes2 = [this.pessoa1, this.pessoa2, this.pessoa3];
@@ -51,4 +54,7 @@ export class DiretivasComponent {
 
   cor: string = 'blue';
   fonte: string = 'arial';
+
+  potato: string = 'Sweet';
+  potato2: string = 'Teste';
 }

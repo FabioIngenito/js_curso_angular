@@ -13,7 +13,7 @@ export class ClientesComponent {
     sobrenome: 'I',
     dataNascimento: '01/01/1979',
     endereco: 'Rua',
-    CEP: '05012',
+    CEP: '05010',
     cidade: 'São Paulo',
     estado: 'SP',
   };
