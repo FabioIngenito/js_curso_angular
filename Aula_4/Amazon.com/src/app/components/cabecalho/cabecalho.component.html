@@ -1,0 +1,40 @@
+<body>
+  <img src="../../../assets/logo 1.png" alt="Amazon.com" />
+  <div id="envio">
+    <div id="enviar">Enviar para</div>
+    <div id="endereco">{{ cliente.estado }}, {{ cliente.cep }}</div>
+  </div>
+
+  <form id="dados" action="/" method="post" [formGroup]="setorForm">
+    <div class="container">
+      <select>
+        <option [ngValue]="">Escolha o setor:</option>
+        <option
+          *ngFor="let setor of setores"
+          [ngValue]="setor.id"
+          [selected]="setor.id === defaultSetor"
+        >
+          {{ setor.nome }}
+        </option>
+      </select>
+
+      <input
+        class="form-control"
+        type="text"
+        name="pesquisa"
+        placeholder="Pesquisa Amazon.com.br"
+      />
+      <button type="submit">
+        <img src="../../../assets/pesquisa.png" alt="pesquisa" />
+      </button>
+    </div>
+  </form>
+
+  <div>
+    <p>
+      Olá, <b>{{ cliente.usuario }}</b>
+    </p>
+  </div>
+
+  <img src="../../../assets/Carrinho 1.png" alt="carrinho" />
+</body>

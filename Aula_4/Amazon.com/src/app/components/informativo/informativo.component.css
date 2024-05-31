@@ -1,0 +1,60 @@
+/* Reset */
+/* Margins e Paddings */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+hr {
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------ */
+
+body {
+  width: 100%;
+  background-color: #232f3e;
+  color: #fff;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+.informativo-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px 0px 20px 40px;
+}
+
+/* CLEAR FIX */
+.informativo-container::after,
+.informativo-container::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.informativo-item {
+  list-style-type: none;
+
+  width: 150px;
+  float: left;
+  margin: 0 10px 20px 10px;
+  padding: 0 30px;
+  line-height: 1.4em;
+}
+
+.informativo-item li b {
+  font-size: 1.125em;
+  color: #fff;
+}
+
+.informativo-item li a {
+  text-decoration: none;
+
+  font-size: 0.875em;
+  color: lightgray;
+}

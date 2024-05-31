@@ -1,0 +1,57 @@
+<body>
+  <div class="carrinho">
+    <p class="carrinhoTitulo">Carrinho de Compras</p>
+    <hr />
+    <ul>
+      <li *ngFor="let prod of produto">
+        <div class="container">
+          <input type="checkbox" name="checkProduto" value="1" checked />
+          <img src="../../../assets/{{ prod.imagem }}" alt="{{ prod.nome }}" />
+
+          <div class="container-dados">
+            <p class="formatNome">
+              {{ prod.nome }}
+            </p>
+
+            <p
+              [ngStyle]="{ color: '#0F0' }"
+              *ngIf="prod.estoque; else semEstoque"
+            >
+              Em estoque
+            </p>
+            <ng-template #semEstoque>
+              <div class="semEstoque">&nbsp;Estoque não disponível</div>
+            </ng-template>
+
+            <p><b>Vendido por:</b> {{ prod.vendidoPor }}</p>
+
+            <p><b>Cor:</b> {{ prod.cor }}</p>
+
+            <p><b>Dimensões:</b> {{ prod.dimensoes }}</p>
+          </div>
+
+          <div class="container-preco">
+            <b>R{{ prod.preco | currency }}</b>
+
+            <p>
+              à vista no Pix e<br />boleto ou em até 10x<br />de R{{
+                prod.preco / 10 | currency
+              }}
+              sem juros
+            </p>
+          </div>
+        </div>
+
+        <hr />
+      </li>
+    </ul>
+    <div class="carrinhoTotal">
+      <p>
+        Total: <b>{{ total | currency }}</b>
+      </p>
+      <p>
+        Total + Frete: <b>{{ totalFrete | currency }}</b>
+      </p>
+    </div>
+  </div>
+</body>

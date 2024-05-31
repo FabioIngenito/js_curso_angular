@@ -1,0 +1,29 @@
+/* Reset */
+/* Margins e Paddings */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------ */
+
+body {
+  width: 100%;
+  background-color: #37475a;
+}
+
+button {
+  width: 100%;
+  background-color: #37475a;
+  border: none;
+
+  box-shadow: none;
+  color: #fff;
+  padding: 10px;
+}

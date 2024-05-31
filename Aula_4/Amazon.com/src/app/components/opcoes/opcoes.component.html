@@ -1,0 +1,11 @@
+<body>
+  <section>
+    <nav *ngFor="let opcao of opcoes; index as i; first as isFirst">
+      <ul>
+        <li list-style-type: none>
+          <a href="#">{{ opcao.nome }}</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</body>

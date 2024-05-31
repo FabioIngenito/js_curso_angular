@@ -1,0 +1,130 @@
+/* Reset */
+/* Margins e Paddings */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* ------------ */
+
+body {
+  width: 100%;
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+.carrinho {
+  max-width: 1200px;
+  padding: 0;
+  border: 0;
+}
+
+.carrinhoTitulo {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.container input {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 0;
+
+  accent-color: #017285;
+}
+
+.container img {
+  width: 150px;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.container p {
+  padding: 3px;
+}
+
+.container-dados {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-stretch;
+
+  height: auto;
+}
+
+.formatNome {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: initial;
+  color: #000000;
+}
+
+.semEstoque {
+  color: #f00;
+}
+
+.container-preco {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: space-around;
+
+  font-style: normal;
+  font-size: 1.25em;
+  line-height: 1em;
+  text-align: right;
+
+  height: 150px;
+}
+
+.container-preco p {
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 0.75em;
+  line-height: 1em;
+  text-align: right;
+}
+
+.carrinhoTotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+
+  font-style: normal;
+  font-size: 1.25em;
+  line-height: 1em;
+  text-align: right;
+
+  margin: 0 auto;
+}
+
+.carrinhoTotal p {
+  padding: 10px 0;
+}
