@@ -1,0 +1,7 @@
+<button (click)="verificaService()">Service</button> <br /><br />
+<button (click)="getData()">Exibir dados da service</button>
+<ul>
+  <li *ngFor="let cliente of clientes">
+    Id: {{ cliente.id }}, Nome: {{ cliente.nome }}, Idade: {{ cliente.idade }}
+  </li>
+</ul>
