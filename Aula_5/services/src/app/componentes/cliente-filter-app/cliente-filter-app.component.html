@@ -1,0 +1,20 @@
+<button (click)="getData()">Lista clientes</button>
+<ul>
+  <li *ngFor="let cliente of clientes">
+    Id: {{ cliente.id }}, Nome: {{ cliente.nome }}, Idade: {{ cliente.idade }}
+  </li>
+</ul>
+<br /><br />
+<button (click)="getDataAdultos()">Clientes Adultos</button>
+<ul>
+  <li *ngFor="let cliente of clientesAdultos">
+    Id: {{ cliente.id }}, Nome: {{ cliente.nome }}, Idade: {{ cliente.idade }}
+  </li>
+</ul>
+<br /><br />
+<button (click)="getDataAdultos2()">Clientes Adultos 2</button>
+<ul>
+  <li *ngFor="let cliente of clientesAdultos2">
+    Id: {{ cliente.id }}, Nome: {{ cliente.nome }}, Idade: {{ cliente.idade }}
+  </li>
+</ul>
