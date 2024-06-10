@@ -9,6 +9,7 @@ Aula 08
 Aula 09
 *.pdf
 *.txt
+*.pptx
 .gitignore
 
 .DS_STORE
