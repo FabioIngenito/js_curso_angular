@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ClienteFilterAppService } from '../../services/cliente-filter-app.service';
+import { ClienteFilterAppService } from '../../services/cliente-filter-app/cliente-filter-app.service';
 
 @Component({
   selector: 'app-cliente-filter-app',

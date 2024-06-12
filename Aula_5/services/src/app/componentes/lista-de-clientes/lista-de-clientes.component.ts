@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ClientesService } from '../../services/clientes.service';
+import { ClientesService } from '../../services/clientes/clientes.service';
 
 @Component({
   selector: 'app-lista-de-clientes',
