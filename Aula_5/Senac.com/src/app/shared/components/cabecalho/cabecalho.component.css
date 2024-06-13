@@ -1,0 +1,76 @@
+/* Reset */
+/* Margins e Paddings */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------ */
+
+body {
+  background: #fff;
+  max-width: 1440px;
+  height: 100px;
+  padding: 10px;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  list-style: none;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #004a8d;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 24px;
+  text-align: left;
+
+  padding: 23px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  color: #fff;
+  background: #2967f4;
+  border-radius: 5px;
+  border-width: 1px;
+
+  width: 200px;
+  height: 31.84px;
+}
+
+#logo {
+  padding-left: 20px;
+}
+
+#login {
+  padding-right: 10px;
+}

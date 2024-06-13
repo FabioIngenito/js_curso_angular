@@ -1,0 +1,25 @@
+<body>
+  @for (curso of cursos; track curso.id) {
+
+  <div id="container">
+    <img src="{{ curso.foto }}" alt="{{ curso.nome }}" />
+
+    <div id="container-texto">
+      <div id="tipo" class="fonte">{{ curso.tipo }}</div>
+      <div id="nome" class="fonte">{{ curso.nome }}</div>
+
+      <a id="comprar" class="fonte" href="#">
+        <img
+          src="../../../../assets/fa-circle-dollar.png"
+          alt="Comprar agora"
+        />
+        Comprar agora
+      </a>
+      <a id="bolsas" class="fonte" href="#">
+        <img src="../../../../assets/btn-bolsas.png" alt="Bolsas de estudo" />
+        Bolsas de estudo
+      </a>
+    </div>
+  </div>
+  }
+</body>

@@ -1,0 +1,96 @@
+/* Reset */
+/* Margins e Paddings */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------ */
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 1440px;
+  height: 600px;
+  padding: 10px;
+
+  background-color: #f2f2f2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#container-texto {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 217px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+#comprar {
+  text-decoration: none;
+  color: #60ce7a;
+}
+
+#bolsas {
+  text-decoration: none;
+  color: #054e8e;
+}
+
+.fonte {
+  display: flex;
+  flex-direction: row;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75em;
+}
+
+#tipo {
+  color: #afb3bc;
+
+  padding-top: 10px;
+}
+
+#nome {
+  font-style: bold;
+  font-weight: 600;
+  font-size: 1em;
+  color: #454f63;
+
+  padding: 20px 0 40px 0;
+}
+
+#comprar {
+  font-style: bold;
+  font-weight: 600;
+  font-size: 0.875em;
+  color: #60cf8a;
+}
+
+#bolsas {
+  font-style: bold;
+  font-weight: 600;
+  font-size: 0.875em;
+  color: #054e8e;
+
+  padding-bottom: 10px;
+}
+
+.fonte img {
+  padding: 0 5px 5px 0;
+}

@@ -1,0 +1,53 @@
+<body>
+  <div id="container">
+    <div id="container-logo-opcao">
+      <img
+        id="logo"
+        src="../../../assets/logo_senac_branco.png "
+        alt="Senac.com"
+      />
+    </div>
+    <div>
+      <ul>
+        @for (opcao of opcoes; track opcao.id) {
+        <li>
+          <a routerLink="{{ opcao.path }}">{{ opcao.nome }}</a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div id="txt-siga-nos">Siga-nos</div>
+    <div id="siga-nos">
+      <a href="https://www.facebook.com/senacsaopaulo"
+        ><img src="../../../../assets/facebook.png" alt="facebook"
+      /></a>
+      <a
+        href="https://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=senacsaopaulo"
+        ><img src="../../../../assets/X.png" alt="X"
+      /></a>
+      <a href="https://www.linkedin.com/company/senac/"
+        ><img src="../../../../assets/linkedin.png" alt="Linkedin"
+      /></a>
+      <a href="https://www.youtube.com/c/senacsaopaulo?sub_confirmation=1"
+        ><img src="../../../../assets/youtube.png" alt="You Tube"
+      /></a>
+      <a href="https://www.instagram.com/senacsaopaulo"
+        ><img src="../../../../assets/instagram.png" alt="Instagram"
+      /></a>
+      <a href="https://br.pinterest.com/senacsaopaulo"
+        ><img src="../../../../assets/pinterest.png" alt="Pinterest"
+      /></a>
+      <a href="https://materiais.sp.senac.br/podcast-senac-sp"
+        ><img src="../../../../assets/spotify.png" alt="Spotify"
+      /></a>
+      <a href="https://www.tiktok.com/@senac.sp"
+        ><img src="../../../../assets/tiktok.png" alt="TikTok"
+      /></a>
+    </div>
+    <div id="ensino_superior">
+      <img src="../../../../assets/ensino_superior.png" alt="Ensino Superior" />
+    </div>
+  </div>
+</body>

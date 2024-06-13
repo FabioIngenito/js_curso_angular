@@ -1,0 +1,102 @@
+/* Reset */
+/* Margins e Paddings */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------ */
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #004a8d;
+  max-width: 1440px;
+  height: 220px;
+  padding: 10px 80px;
+}
+
+div {
+  color: #fff;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  list-style: none;
+  margin: 0 auto;
+
+  padding: 35px 0 0 80px;
+}
+
+li {
+  padding-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  text-align: left;
+  padding: 0 3px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#container-logo-opcao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#txt-siga-nos {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+#siga-nos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  text-align: left;
+  padding-bottom: 40px;
+}
+
+#ensino_superior {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+}

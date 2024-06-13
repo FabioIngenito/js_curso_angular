@@ -1,0 +1,41 @@
+<body>
+  <app-cabecalho></app-cabecalho>
+
+  <img src="../../../assets/NossaUnidades.jpg" alt="Nossa Unidades" />
+
+  <div id="unidades">
+    <p>Unidades</p>
+  </div>
+  <div id="container">
+    <div class="container-unidades">
+      <ul>
+        <div class="container-itens">
+          <p>Capital</p>
+          <li *ngFor="let unidade of unidadesCapital">
+            {{ unidade.nome }}
+          </li>
+        </div>
+      </ul>
+      <ul>
+        <div class="container-itens">
+          <p>Grande São Paulo e Litoral</p>
+          <li *ngFor="let unidade of unidadesGrandeSP">
+            {{ unidade.nome }}
+          </li>
+        </div>
+      </ul>
+      <ul>
+        <div class="container-itens">
+          <p>Interior</p>
+          <li *ngFor="let unidade of unidadesInterior">
+            {{ unidade.nome }}
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div id="branco"></div>
+
+  <app-informacoes></app-informacoes>
+  <app-rodape></app-rodape>
+</body>
