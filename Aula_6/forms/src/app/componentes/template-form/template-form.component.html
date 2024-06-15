@@ -1,0 +1,15 @@
+<!-- form>div(.label+input)+div -->
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div>
+    <label>Nome:</label>
+    <input type="text" name="name" ngModel required #name="ngModel" />
+    <div *ngIf="name.invalid && name.touched" class="error">
+      nome Obrigatório
+    </div>
+  </div>
+  <div>
+    <label>E-mail:</label>
+    <input type="text" name="email" ngModel />
+  </div>
+  <button type="submit">Submit</button>
+</form>

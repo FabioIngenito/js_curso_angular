@@ -1,0 +1,9 @@
+<h1>APIS</h1>
+<button (click)="fetchData()">fetchData</button>
+<button (click)="clearData()">form clear</button>
+<ul>
+  <li *ngFor="let item of data">
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.body }}</p>
+  </li>
+</ul>
