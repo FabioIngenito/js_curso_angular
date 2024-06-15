@@ -12,10 +12,13 @@ import { Component, OnInit, inject } from '@angular/core';
 export class DataDisplayComponent implements OnInit {
   httpClient = inject(HttpClient);
   data: any[] = [];
+  btn = document.querySelector('#refresh');
 
   ngOnInit(): void {
     this.fetchData();
   }
+
+  // raw.githubusercontent.com
 
   fetchData() {
     this.httpClient
@@ -24,5 +27,9 @@ export class DataDisplayComponent implements OnInit {
         console.log(data);
         this.data = data;
       });
+  }
+
+  clearData() {
+    this.data = [];
   }
 }
